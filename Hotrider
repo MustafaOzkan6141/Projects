@@ -7,4 +7,4 @@ while robot.is_ok():
     elif robot.center() < robot.left():
         robot.turn_left()
     else: robot.move_forward()
-    
+    #mustafa .
