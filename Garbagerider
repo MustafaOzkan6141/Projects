@@ -1,0 +1,35 @@
+from js import robot
+for i in range (0,4):
+    robot.move_distance(1)
+    robot.rotate_angle(-90)
+    robot.rotate_angle(90)
+for i in range (0,2):
+    robot.move_distance(1)
+    robot.rotate_angle(-90)
+for i in range (0,4):
+    robot.move_distance(1)
+    robot.rotate_angle(90)
+    robot.rotate_angle(-90)
+for i in range (0,2):
+    robot.move_distance(1)
+    robot.rotate_angle(90)
+for i in range (0,4):
+    robot.move_distance(1)
+    robot.rotate_angle(-90)
+    robot.rotate_angle(90)
+for i in range (0,2):
+    robot.move_distance(1)
+    robot.rotate_angle(-90)
+for i in range (0,4):
+    robot.move_distance(1)
+    robot.rotate_angle(90)
+    robot.rotate_angle(-90)
+robot.rotate_angle(-180)
+robot.move_distance(1.5)
+robot.rotate_angle(90)
+robot.move_distance(0.5)
+for i in range (0,4):
+    robot.move_distance(1)
+    robot.rotate_angle(-30)
+    robot.rotate_angle(30)
+    #Mustafa Özkan Eryiğit
