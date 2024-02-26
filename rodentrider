@@ -1,0 +1,32 @@
+from js import robot
+import random
+
+#git = 3
+
+
+#while robot.is_ok():
+ #   git = random.randrange(3)
+  
+  #  if git == 0 and not robot.wall_left():
+   #     robot.turn_left()
+    #    robot.move_forward()
+    #elif git == 1 and not robot.wall_right():
+     #   robot.turn_right()
+      #  robot.move_forward()
+    #elif git == 2 and not robot.wall_front():
+     #   robot.move_forward()
+    #elif robot.wall_left() and robot.wall_right() and robot.wall_front():
+    #    robot.turn_left()
+     #   robot.turn_left()
+
+# üsteki kod rastgele bulma görevini tamamlıyor altaki ise diğer görevi tamamlıyor 
+
+
+while robot.is_ok():
+    if not robot.wall_left():
+        robot.turn_left()
+        robot.move_forward()
+    elif not robot.wall_front():
+        robot.move_forward()
+    else:
+        robot.turn_right()
