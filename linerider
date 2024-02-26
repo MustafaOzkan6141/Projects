@@ -1,0 +1,52 @@
+while robot.is_ok():
+    sensör_data = robot.camera_pixels()
+    sayac = 0
+    toplam_index = 0
+    çizgi_index = 0
+    for i in range(0,len(sensör_data)):
+        if sensör_data[i] > 50:
+            sayac = sayac + 1
+            toplam_index = toplam_index + i 
+    if sayac > 0:
+        çizgi_index = toplam_index/ sayac
+        error = lenght_sensör_data / 2 - çizgi_index
+        kp = 20
+        command= error*kp
+        robot.move(5.0)
+        robot.rotate(command)
+        son_komut = command
+    else:
+        robot.move(0)
+        robot.rotate(son_komut)
+
+
+# while robot.is_ok():
+#     robot.move(1.0)
+
+
+#     sensör_data = robot.camera_pixels()
+#     max1 = max(sensör_data)
+
+#     lenght_sensör_data = len(sensör_data)
+
+#     index_sensör_data = 0
+
+#     for i in range (0,lenght_sensör_data):
+#         if sensör_data[i] == max1 :
+#             index_sensör_data = i
+#      if index_sensör_data < lenght_sensör_data / 2 :
+#          robot.rotate(10000)
+#      elif index_sensör_data > lenght_sensör_data / 2:
+#          robot.rotate(-10000)
+#      else:
+#          robot.rotate(0)
+#     error = lenght_sensör_data / 2 - index_sensör_data
+#     kp = 20
+#     command = error * kp
+#     robot.rotate(command)from js import robot
+
+
+sensör_data = []
+son_komut = 0
+
+    
